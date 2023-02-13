@@ -732,7 +732,7 @@ function kwhperiod_draw () {
 
       if (kwhPerDayConversion) {
         var periodMillis = pastperiodEndTime.getTime() - pastPeriodStartTime.getTime()
-        val = (periodMillis/msToDayConversion)*val // convert kWh to kWhperday
+        val = (msToDayConversion/periodMillis)*val // convert kWh to kWhperday
       }
     } else {
       // thisperiodEndValue
@@ -756,7 +756,7 @@ function kwhperiod_draw () {
       }
       if (kwhPerDayConversion) {
         var periodMillis = now.getTime() - thisPeriodStartTime.getTime()
-        val = (periodMillis/msToDayConversion)*val // convert kWh to kWhperday
+        val = (msToDayConversion/periodMillis)*val // convert kWh to kWhperday
       }
     }
   }
